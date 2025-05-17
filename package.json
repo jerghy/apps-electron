@@ -1,0 +1,24 @@
+{
+  "name": "app-electron",
+  "version": "1.0.0",
+  "description": "apps by electron",
+  "homepage": "https://github.com/jerghy/apps-electron#readme",
+  "bugs": {
+    "url": "https://github.com/jerghy/apps-electron/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerghy/apps-electron.git"
+  },
+  "license": "ISC",
+  "author": "ThomasXie",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "npm test"
+  },
+  "devDependencies": {
+    "electron": "^36.2.1"
+  }
+}
