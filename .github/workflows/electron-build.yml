@@ -1,0 +1,28 @@
+name: Electron Build for Windows
+
+on:
+  push:
+    branches:
+      - main  # 指定触发的分支
+  workflow_dispatch:  # 手动触发
+
+jobs:
+  build:
+    runs-on: windows-latest  # 使用最新的Windows环境
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'  # 根据你的项目需求设置Node.js版本
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Electron app
+        run: npm run dist
+        env:
+          ELECTRON_PLATFORM: win32  # 指定构建Windows平台
